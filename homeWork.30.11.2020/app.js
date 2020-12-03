@@ -75,54 +75,55 @@
 
 // ///////////////////////////////////////////////////////
 
-// ////////////////////// Ex.4 ///////////////////////////
+////////////////////// Ex.4 ///////////////////////////
 
-// let getMyCordinates = () => {
-//   return new Promise((resolve, reject) => {
-//    setTimeout(() => {
-//     if (navigator.geolocation) {
-//         resolve(navigator.geolocation.getCurrentPosition(showPosition));
-//       } else {
-//         reject("Geolocation is not supported by this browser.");
-//       }
-//    }, 2000);
+let getMyCordinates = () => {
+  return new Promise((resolve, reject) => {
+   setTimeout(() => {
+    if (navigator.geolocation) {
+        resolve(navigator.geolocation.getCurrentPosition(showPosition));
+      } else {
+        reject("Geolocation is not supported by this browser.");
+      }
+   }, 2000);
 
-//     function showPosition(position) {
-//       console.log(
-//         "Latitude: " +
-//           position.coords.latitude +
-//           "\nLongitude: " +
-//           position.coords.longitude
-//       );
-//     }
-//   });
-// };
+    function showPosition(position) {
+      console.log(
+        "Latitude: " +
+          position.coords.latitude +
+          "\nLongitude: " +
+          position.coords.longitude
+      );
+    }
+  });
+};
 
 // getMyCordinates()
 //   .then((a) => a)
 //   .catch((b) => console.log(b));
 
-// /////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
 
-// //////////////////////// Ex.5 ////////////////////////////////
+//////////////////////// Ex.5 ////////////////////////////////
 
-// let numArr = [];
+let numArr = [];
 
-// for (let i = 0; i < 20; i++) {
-//   let randomNumber = Math.floor(Math.random() * 100) + 1;
-//   numArr.push(randomNumber);
-// }
-// console.log(numArr);
+for (let i = 0; i < 20; i++) {
+  let randomNumber = Math.floor(Math.random() * 100) + 1;
+  numArr.push(randomNumber);
+}
+console.log(numArr);
 
-// let multiplyNumbers = (num) => {
-//   return new Promise((resolve) => {
-//     let newNumArr = numArr.map((item) => item * num);
-//     setTimeout(() => {
-//       resolve(newNumArr);
-//     }, 1000);
-//   });
-// };
+let multiplyNumbers = (num) => {
+  return new Promise((resolve) => {
+      let newNumArr = numArr.map((item) => item * num);
+      setTimeout(() => {
+      resolve(newNumArr);
+    }, 1000);
+  });
+};
+Promise.all([getMyCordinates(),multiplyNumbers(2)]).then(item => { return[
+    console.log(item[1]) , item[0]
+] })
 
-// Promise.all([getMyCordinates(),multiplyNumbers(2)]).then(item => console.log(item[0],item[1]))
-
-// ////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
