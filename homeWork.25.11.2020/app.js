@@ -1,27 +1,37 @@
-let randomNumberOne = Math.floor(Math.random() * 10);
-let randomNumberTwo = Math.floor(Math.random() * 10);
-let randomNumberThree = Math.floor(Math.random() * 4);
+// let randomNumberOne = Math.floor(Math.random() * 10);
+// let randomNumberTwo = Math.floor(Math.random() * 10);
+// let randomNumberThree = Math.floor(Math.random() * 4);
 
-function doCalc(a, b) {
-  //   let randomNumberThree = Math.floor(Math.random() * 4);
+function doCalc(functionCalc) {
+  let randomNumberOne = Math.floor(Math.random() * 10);
+  let randomNumberTwo = Math.floor(Math.random() * 10);
+  return  functionCalc(randomNumberOne, randomNumberTwo);
+
+}
+
+let randomCalc = (a,b) => {
+  let randomNumberThree = Math.floor(Math.random() * 4);
   let calcOptions = [a + b, a - b, a * b, a / b];
-  return calcOptions[randomNumberThree];
-}
+  return calcOptions[randomNumberThree] 
+};
 
-console.log(doCalc(randomNumberOne, randomNumberTwo));
+let result1 = doCalc(randomCalc)
+console.log(result1)
 
-function doCalc2(a, b) {
-  //   let randomNumberThree = Math.floor(Math.random() * 4);
-  let calcOptions = [
-    { plus: a + b },
-    { minus: a - b },
-    { Dual: a * b },
-    { division: a / b },
-  ];
-  return calcOptions[randomNumberThree];
-}
+// console.log(doCalc(randomNumberOne, randomNumberTwo));
 
-console.log(doCalc2(randomNumberOne, randomNumberTwo));
+// function doCalc2(a, b) {
+//   //   let randomNumberThree = Math.floor(Math.random() * 4);
+//   let calcOptions = [
+//     { plus: a + b },
+//     { minus: a - b },
+//     { Dual: a * b },
+//     { division: a / b },
+//   ];
+//   return calcOptions[randomNumberThree];
+// }
+
+// console.log(doCalc2(randomNumberOne, randomNumberTwo));
 
 //////////////////////////////////////////////////////////////////
 
