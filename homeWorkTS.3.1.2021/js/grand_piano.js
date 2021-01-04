@@ -13,19 +13,19 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var Grand_piano = /** @class */ (function (_super) {
     __extends(Grand_piano, _super);
-    function Grand_piano(length, numberOfkeyboards, model, manufacturer, color) {
-        var _this = _super.call(this, numberOfkeyboards, model, manufacturer, color) || this;
+    function Grand_piano(length, numberOfkeyboards, model, manufacturer, color, productID) {
+        var _this = _super.call(this, numberOfkeyboards, model, manufacturer, color, productID) || this;
         _this.length = length;
         _this.numberOfkeyboards = numberOfkeyboards;
         _this.model = model;
         _this.manufacturer = manufacturer;
         _this.color = color;
+        _this.productID = productID;
         _this.length = length;
         return _this;
     }
     Grand_piano.prototype.display = function () {
         _super.prototype.display.call(this);
-        console.log(this.length);
     };
     return Grand_piano;
 }(Piano));

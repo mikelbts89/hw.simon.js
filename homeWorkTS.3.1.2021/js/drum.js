@@ -13,18 +13,18 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var Drum = /** @class */ (function (_super) {
     __extends(Drum, _super);
-    function Drum(diameter, model, manufacturer, color) {
-        var _this = _super.call(this, model, manufacturer, color) || this;
+    function Drum(diameter, model, manufacturer, color, productID) {
+        var _this = _super.call(this, model, manufacturer, color, productID) || this;
         _this.diameter = diameter;
         _this.model = model;
         _this.manufacturer = manufacturer;
         _this.color = color;
+        _this.productID = productID;
         _this.diameter = diameter;
         return _this;
     }
     Drum.prototype.display = function () {
         _super.prototype.display.call(this);
-        console.log(this.diameter);
     };
     return Drum;
 }(Musical_instruments));

@@ -13,18 +13,18 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var Piano = /** @class */ (function (_super) {
     __extends(Piano, _super);
-    function Piano(numberOfkeyboards, model, manufacturer, color) {
-        var _this = _super.call(this, model, manufacturer, color) || this;
+    function Piano(numberOfkeyboards, model, manufacturer, color, productID) {
+        var _this = _super.call(this, model, manufacturer, color, productID) || this;
         _this.numberOfkeyboards = numberOfkeyboards;
         _this.model = model;
         _this.manufacturer = manufacturer;
         _this.color = color;
+        _this.productID = productID;
         _this.numberOfkeyboards = numberOfkeyboards;
         return _this;
     }
     Piano.prototype.display = function () {
         _super.prototype.display.call(this);
-        console.log(this.numberOfkeyboards);
     };
     return Piano;
 }(Musical_instruments));

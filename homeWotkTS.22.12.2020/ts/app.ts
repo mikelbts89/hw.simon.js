@@ -1,37 +1,29 @@
-const mainDiv:HTMLElement = document.querySelector(".container")
-    
-    class Perfume {
-        name:string
-        company:string
-        ml:number
-        gender:string
-        price:number
-        constructor(name,company,ml,gender,price){
-            this.name = name
-            this.company = company
-            this.ml = ml
-            this.gender = gender
-            this.price = price
-        }
-        createCard(){
-            let productCard:string = `<div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">${this.name}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">${this.company}</h6>
-              <h6 class="card-title">${this.ml}ml</h6>
-              <h6 class="card-title">for: ${this.gender}</h6>
-              <h6 class="card-title">${this.price}$</h6>
-            </div>
-          </div>`
-         return mainDiv.innerHTML = productCard
-        }
-        getVat(){
-            let vat = this.price/100*17
-            return  vat
-        }
-    }
 
-    let cocoChanel = new Perfume("Coco Chanel","Chanel",70,"Female",500)
-    cocoChanel.createCard()
-    console.log("🚀 ~ file: app.ts ~ line 37 ~ cocoChanel.getVat()", cocoChanel.getVat())
-    
+let cocoChanel = new Perfume("Coco Chanel", "Chanel", 70, "Lady", 500, 123)
+cocoChanel.createCard()
+console.log("🚀 ~ file: app.ts ~ line 4 ~ cocoChanel.getVat()", cocoChanel.getVat())
+console.log("🚀 ~ file: app.ts ~ line 5 ~ cocoChanel._uuid", cocoChanel._uuid)
+cocoChanel._uuid = 111
+console.log("🚀 ~ file: app.ts ~ line 7 ~ cocoChanel._uuid", cocoChanel._uuid)
+
+let armaniCode = new Perfume("Armani Code", "Armani", 70, "Man", 340, 321)
+armaniCode.createCard()
+
+let chanelNo5 = new Perfume("Chanel No 5", "Chanel", 70, "Lady", 700, 231)
+chanelNo5.createCard()
+
+const macBook = new Product("MacBook", true, "1We4572", "Computer",)
+macBook.sendOrder()
+macBook.getId()
+macBook.initProduct()
+
+const dellLaptop = new Product("Dell", true, "12QXP43T", "Laptop")
+dellLaptop.sendOrder()
+dellLaptop.getId()
+dellLaptop.initProduct()
+
+const lenovoComp = new Product("Lenovo", true, "96WV5M4", "Computer")
+lenovoComp.initProduct()
+
+const ak47 = new Product("AK47", true, "6514864", "Automatic firearm")
+ak47.initProduct()

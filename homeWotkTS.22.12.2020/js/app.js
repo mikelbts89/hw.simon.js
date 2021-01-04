@@ -1,22 +1,22 @@
-var mainDiv = document.querySelector(".container");
-var Perfume = /** @class */ (function () {
-    function Perfume(name, company, ml, gender, price) {
-        this.name = name;
-        this.company = company;
-        this.ml = ml;
-        this.gender = gender;
-        this.price = price;
-    }
-    Perfume.prototype.createCard = function () {
-        var productCard = "<div class=\"card\" style=\"width: 18rem;\">\n            <div class=\"card-body\">\n              <h5 class=\"card-title\">" + this.name + "</h5>\n              <h6 class=\"card-subtitle mb-2 text-muted\">" + this.company + "</h6>\n              <h6 class=\"card-title\">" + this.ml + "ml</h6>\n              <h6 class=\"card-title\">for: " + this.gender + "</h6>\n              <h6 class=\"card-title\">" + this.price + "$</h6>\n            </div>\n          </div>";
-        return mainDiv.innerHTML = productCard;
-    };
-    Perfume.prototype.getVat = function () {
-        var vat = this.price / 100 * 17;
-        return vat;
-    };
-    return Perfume;
-}());
-var cocoChanel = new Perfume("Coco Chanel", "Chanel", 70, "Female", 500);
+var cocoChanel = new Perfume("Coco Chanel", "Chanel", 70, "Lady", 500, 123);
 cocoChanel.createCard();
-console.log("🚀 ~ file: app.ts ~ line 37 ~ cocoChanel.getVat()", cocoChanel.getVat());
+console.log("🚀 ~ file: app.ts ~ line 4 ~ cocoChanel.getVat()", cocoChanel.getVat());
+console.log("🚀 ~ file: app.ts ~ line 5 ~ cocoChanel._uuid", cocoChanel._uuid);
+cocoChanel._uuid = 111;
+console.log("🚀 ~ file: app.ts ~ line 7 ~ cocoChanel._uuid", cocoChanel._uuid);
+var armaniCode = new Perfume("Armani Code", "Armani", 70, "Man", 340, 321);
+armaniCode.createCard();
+var chanelNo5 = new Perfume("Chanel No 5", "Chanel", 70, "Lady", 700, 231);
+chanelNo5.createCard();
+var macBook = new Product("MacBook", true, "1We4572", "Computer");
+macBook.sendOrder();
+macBook.getId();
+macBook.initProduct();
+var dellLaptop = new Product("Dell", true, "12QXP43T", "Laptop");
+dellLaptop.sendOrder();
+dellLaptop.getId();
+dellLaptop.initProduct();
+var lenovoComp = new Product("Lenovo", true, "96WV5M4", "Computer");
+lenovoComp.initProduct();
+var ak47 = new Product("AK47", true, "6514864", "Automatic firearm");
+ak47.initProduct();
