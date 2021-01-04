@@ -68,3 +68,23 @@ let bcd = new BC(1, 2, 3)
 console.log("🚀 ~ file: test.ts ~ line 67 ~ bcd", bcd)
 console.log(bcd.getNewNumber())
 bcd.dislay()
+
+interface Iclass {
+    numbers: number
+    strings: string
+    test: boolean
+    display(): void
+}
+
+class Nama implements Iclass {
+    numbers = 12
+    strings = "str"
+    test = true
+    display() {
+        console.log(this.numbers)
+    }
+}
+
+let namaNew = new Nama()
+console.log("🚀 ~ file: test.ts ~ line 89 ~ namaNew", namaNew)
+namaNew.display()

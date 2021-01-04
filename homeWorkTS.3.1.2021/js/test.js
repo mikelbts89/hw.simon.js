@@ -77,3 +77,17 @@ var bcd = new BC(1, 2, 3);
 console.log("🚀 ~ file: test.ts ~ line 67 ~ bcd", bcd);
 console.log(bcd.getNewNumber());
 bcd.dislay();
+var Nama = /** @class */ (function () {
+    function Nama() {
+        this.numbers = 12;
+        this.strings = "str";
+        this.test = true;
+    }
+    Nama.prototype.display = function () {
+        console.log(this.numbers);
+    };
+    return Nama;
+}());
+var namaNew = new Nama();
+console.log("🚀 ~ file: test.ts ~ line 89 ~ namaNew", namaNew);
+namaNew.display();
